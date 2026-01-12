@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class NotificacaoSnsService {
 
-
+    @Autowired
     private AmazonSNS amazonSNS;
 
     public void notificar(String telefone, String mensagem) {

@@ -13,9 +13,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AmazonSnsConfiguration {
 
-    private String acessKey = "Access";
+    @Value("${aws.acessKey}")
+    private String acessKey;
 
-    private String secretKey = "Secret";
+    @Value("${aws.secretKey}")
+    private String secretKey;
 
     @Bean
     public AWSCredentials awsCredentials() {
